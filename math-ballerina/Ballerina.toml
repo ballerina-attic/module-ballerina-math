@@ -7,7 +7,7 @@ target = "java8"
 
     [[platform.libraries]]
     artifactId = "math"
-    version = "1.0.0-SNAPSHOT"
-    path = "../math-native/build/libs/math-native-1.0.0-SNAPSHOT.jar"
+    version = "@project.version@"
+    path = "../math-native/build/libs/math-native-@project.version@.jar"
     groupId = "ballerina"
     modules = ["math"]
