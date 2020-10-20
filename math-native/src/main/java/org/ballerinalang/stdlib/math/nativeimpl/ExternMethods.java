@@ -18,9 +18,9 @@
 
 package org.ballerinalang.stdlib.math.nativeimpl;
 
-import org.ballerinalang.jvm.api.BErrorCreator;
-import org.ballerinalang.jvm.api.BStringUtils;
-import org.ballerinalang.jvm.api.values.BError;
+import io.ballerina.runtime.api.ErrorCreator;
+import io.ballerina.runtime.api.StringUtils;
+import io.ballerina.runtime.api.values.BError;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -77,6 +77,6 @@ public class ExternMethods {
     }
 
     private static BError createMathError(String errMsg) {
-        return BErrorCreator.createDistinctError(MATH_ERROR, MATH_PACKAGE_ID, BStringUtils.fromString(errMsg));
+        return ErrorCreator.createDistinctError(MATH_ERROR, MATH_PACKAGE_ID, StringUtils.fromString(errMsg));
     }
 }

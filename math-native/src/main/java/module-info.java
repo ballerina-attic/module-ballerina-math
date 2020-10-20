@@ -18,6 +18,6 @@
 
 module io.ballerina.stdlib.math {
     requires io.ballerina.lang;
-    requires io.ballerina.jvm;
+    requires io.ballerina.runtime;
     exports org.ballerinalang.stdlib.math.nativeimpl;
 }
