@@ -18,9 +18,9 @@
 
 package org.ballerinalang.stdlib.math.nativeimpl;
 
-import org.ballerinalang.jvm.types.BPackage;
+import io.ballerina.runtime.api.Module;
 
-import static org.ballerinalang.jvm.util.BLangConstants.BALLERINA_BUILTIN_PKG_PREFIX;
+import static io.ballerina.runtime.util.BLangConstants.BALLERINA_BUILTIN_PKG_PREFIX;
 
 /**
  * Constants related to math operations.
@@ -39,6 +39,6 @@ public class Constant {
 
     public static final String MATH_PACKAGE_VERSION =  "1.0.1";
 
-    static final BPackage MATH_PACKAGE_ID = new BPackage(BALLERINA_BUILTIN_PKG_PREFIX, PACKAGE_NAME,
+    static final Module MATH_PACKAGE_ID = new Module(BALLERINA_BUILTIN_PKG_PREFIX, PACKAGE_NAME,
             MATH_PACKAGE_VERSION);
 }
