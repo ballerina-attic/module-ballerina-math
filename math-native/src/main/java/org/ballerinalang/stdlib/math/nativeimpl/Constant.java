@@ -39,6 +39,5 @@ public class Constant {
 
     public static final String MATH_PACKAGE_VERSION =  "1.0.1";
 
-    static final Module MATH_PACKAGE_ID = new Module(BALLERINA_BUILTIN_PKG_PREFIX, PACKAGE_NAME,
-            MATH_PACKAGE_VERSION);
+    static final Module MATH_PACKAGE_ID = new Module(BALLERINA_BUILTIN_PKG_PREFIX, PACKAGE_NAME, MATH_PACKAGE_VERSION);
 }
