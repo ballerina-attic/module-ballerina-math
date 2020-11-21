@@ -1,13 +1,10 @@
-[project]
-org-name = "ballerina"
+[package]
+org = "ballerina"
+name = "math"
 version = "@toml.version@"
 
-[platform]
-target = "java11"
-
-    [[platform.libraries]]
-    artifactId = "math"
-    version = "@project.version@"
-    path = "../math-native/build/libs/math-native-@project.version@.jar"
-    groupId = "ballerina"
-    modules = ["math"]
+[[platform.java11.dependency]]
+path = "../math-native/build/libs/math-native-@project.version@.jar"
+groupId = "ballerina"
+artifactId = "math"
+version = "@project.version@"
