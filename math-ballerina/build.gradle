@@ -125,7 +125,7 @@ task ballerinaBuild {
         }
         copy {
             from file("$project.projectDir/target/balo")
-            into file("$artifactCacheParent/caches/balo/${packageOrg}/${packageName}/${tomlVersion}")
+            into file("$artifactCacheParent/balo/${packageOrg}/${packageName}/${tomlVersion}")
         }
         copy {
             from file("${artifactLibParent}/libs")
