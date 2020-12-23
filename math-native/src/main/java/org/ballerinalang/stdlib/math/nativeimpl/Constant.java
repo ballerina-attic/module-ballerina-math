@@ -35,9 +35,15 @@ public class Constant {
 
     public static final String OVERFLOW_ERROR_MSG = "Overflow occurred";
 
-    private static final String PACKAGE_NAME = "math";
-
+    /**
+     * Math standard library version.
+     * @deprecated Use MathUtils.getMathPackage().getVersion().
+     */
     public static final String MATH_PACKAGE_VERSION =  "1.0.1";
 
-    static final Module MATH_PACKAGE_ID = new Module(BALLERINA_BUILTIN_PKG_PREFIX, PACKAGE_NAME, MATH_PACKAGE_VERSION);
+    /**
+     * Math standard library package ID.
+     * @deprecated Use MathUtils.getMathPackage().
+     */
+    static final Module MATH_PACKAGE_ID = new Module(BALLERINA_BUILTIN_PKG_PREFIX, "math", MATH_PACKAGE_VERSION);
 }
