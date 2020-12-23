@@ -27,8 +27,8 @@ import java.util.concurrent.ThreadLocalRandom;
 import static org.ballerinalang.stdlib.math.nativeimpl.Constant.DIVIDE_BY_ZERO_ERROR_MSG;
 import static org.ballerinalang.stdlib.math.nativeimpl.Constant.ILLEGAL_ARGUMENT_ERROR_MSG;
 import static org.ballerinalang.stdlib.math.nativeimpl.Constant.MATH_ERROR;
-import static org.ballerinalang.stdlib.math.nativeimpl.Constant.MATH_PACKAGE_ID;
 import static org.ballerinalang.stdlib.math.nativeimpl.Constant.OVERFLOW_ERROR_MSG;
+import static org.ballerinalang.stdlib.math.nativeimpl.ModuleUtils.getModule;
 
 /**
  * External functions for ballerina/math library.
@@ -77,6 +77,6 @@ public class ExternMethods {
     }
 
     private static BError createMathError(String errMsg) {
-        return ErrorCreator.createDistinctError(MATH_ERROR, MATH_PACKAGE_ID, StringUtils.fromString(errMsg));
+        return ErrorCreator.createDistinctError(MATH_ERROR, getModule(), StringUtils.fromString(errMsg));
     }
 }

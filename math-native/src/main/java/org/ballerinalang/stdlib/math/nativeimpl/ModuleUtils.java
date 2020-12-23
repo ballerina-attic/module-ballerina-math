@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ * Copyright (c) 2020 WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
  *
  * WSO2 Inc. licenses this file to you under the Apache License,
  * Version 2.0 (the "License"); you may not use this file except
@@ -18,16 +18,29 @@
 
 package org.ballerinalang.stdlib.math.nativeimpl;
 
+import io.ballerina.runtime.api.Environment;
+import io.ballerina.runtime.api.Module;
+
 /**
- * Constants related to math operations.
+ * This class will hold module related utility functions.
+ *
+ * @since 2.0.0
  */
-public class Constant {
+public class ModuleUtils {
 
-    static final String MATH_ERROR = "ArithmeticError";
+    /**
+     * Math standard library package ID.
+     */
+    private static Module mathModule = null;
 
-    public static final String ILLEGAL_ARGUMENT_ERROR_MSG = "End range must be greater than the start range";
+    private ModuleUtils() {
+    }
 
-    public static final String DIVIDE_BY_ZERO_ERROR_MSG = "Division by zero occurred";
+    public static void setModule(Environment env) {
+        mathModule = env.getCurrentModule();
+    }
 
-    public static final String OVERFLOW_ERROR_MSG = "Overflow occurred";
+    public static Module getModule() {
+        return mathModule;
+    }
 }
