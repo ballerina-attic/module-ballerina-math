@@ -34,16 +34,4 @@ public class Constant {
     public static final String DIVIDE_BY_ZERO_ERROR_MSG = "Division by zero occurred";
 
     public static final String OVERFLOW_ERROR_MSG = "Overflow occurred";
-
-    /**
-     * Math standard library version.
-     * @deprecated Use MathUtils.getMathPackage().getVersion().
-     */
-    public static final String MATH_PACKAGE_VERSION =  "1.0.1";
-
-    /**
-     * Math standard library package ID.
-     * @deprecated Use MathUtils.getMathPackage().
-     */
-    static final Module MATH_PACKAGE_ID = new Module(BALLERINA_BUILTIN_PKG_PREFIX, "math", MATH_PACKAGE_VERSION);
 }
