@@ -18,10 +18,6 @@
 
 package org.ballerinalang.stdlib.math.nativeimpl;
 
-import io.ballerina.runtime.api.Module;
-
-import static io.ballerina.runtime.api.constants.RuntimeConstants.BALLERINA_BUILTIN_PKG_PREFIX;
-
 /**
  * Constants related to math operations.
  */
